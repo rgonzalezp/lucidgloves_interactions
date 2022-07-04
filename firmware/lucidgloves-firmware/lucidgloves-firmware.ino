@@ -40,17 +40,17 @@
 
 
 //joystick configuration
-#define JOYSTICK_BLANK false //make true if not using the joystick
+#define JOYSTICK_BLANK true //make true if not using the joystick
 #define JOY_FLIP_X false
 #define JOY_FLIP_Y false
 #define JOYSTICK_DEADZONE 10 //deadzone in the joystick to prevent drift (in percent)
 
 #define NO_THUMB false //If for some reason you don't want to track the thumb
 
-#define USING_CALIB_PIN false //When PIN_CALIB is shorted (or it's button pushed) it will reset calibration if this is on.
+#define USING_CALIB_PIN true //When PIN_CALIB is shorted (or it's button pushed) it will reset calibration if this is on.
 
-#define USING_FORCE_FEEDBACK false //Force feedback haptics allow you to feel the solid objects you hold
-#define SERVO_SCALING false //dynamic scaling of servo motors
+#define USING_FORCE_FEEDBACK true //Force feedback haptics allow you to feel the solid objects you hold
+#define SERVO_SCALING true //dynamic scaling of servo motors
 
 //PINS CONFIGURATION 
 #if defined(__AVR__)
@@ -78,25 +78,25 @@
   #define PIN_MENU_BTN        8
 #elif defined(ESP32)
   //(This configuration is for ESP32 DOIT V1 so make sure to change if you're on another board)
-  #define PIN_PINKY     36
-  #define PIN_RING      39
+  #define PIN_PINKY     32
+  #define PIN_RING      35
   #define PIN_MIDDLE    34
-  #define PIN_INDEX     35
-  #define PIN_THUMB     32
-  #define PIN_JOY_X     33
-  #define PIN_JOY_Y     25
-  #define PIN_JOY_BTN   26
-  #define PIN_A_BTN     27 
+  #define PIN_INDEX     39
+  #define PIN_THUMB     36
+  #define PIN_JOY_X     18
+  #define PIN_JOY_Y     19
+  #define PIN_JOY_BTN   36
+  #define PIN_A_BTN     22 
   #define PIN_B_BTN     14
   #define PIN_TRIG_BTN  12 //unused if gesture set
   #define PIN_GRAB_BTN  13 //unused if gesture set
   #define PIN_PNCH_BTN  23 //unused if gesture set
-  #define PIN_CALIB     12 //button for recalibration
+  #define PIN_CALIB     17 //button for recalibration
   #define DEBUG_LED 2
-  #define PIN_PINKY_MOTOR     5  //used for force feedback
-  #define PIN_RING_MOTOR      18 //^
-  #define PIN_MIDDLE_MOTOR    19 //^
-  #define PIN_INDEX_MOTOR     21 //^
-  #define PIN_THUMB_MOTOR     17 //^
+  #define PIN_PINKY_MOTOR     25 //used for force feedback
+  #define PIN_RING_MOTOR      14 //^
+  #define PIN_MIDDLE_MOTOR    26 //^
+  #define PIN_INDEX_MOTOR     13 //^
+  #define PIN_THUMB_MOTOR     33 //^
   #define PIN_MENU_BTN        27
 #endif
